@@ -1,0 +1,32 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor #f2f2f2
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+skinparam SequenceMessageAlign center
+
+participant CBE as cbe
+participant CBC as cbc
+participant MME as mme
+
+group Alert 1
+    cbe -> cbc: [1.1] CAP Alert
+    cbc -> mme: [1.2] WRITE-REPLACE WARNING REQUEST
+    mme -> cbc: [1.3] WRITE-REPLACE WARNING RESPONSE
+end
+
+== Alert 1 is active ==
+
+group Alert 2
+    cbe -> cbc: [2.1] CAP Alert
+    cbc -> mme: [2.2] WRITE-REPLACE WARNING REQUEST
+    mme -> cbc: [2.3] WRITE-REPLACE WARNING RESPONSE
+end
+
+== Alerts 1 and 2 are both active ==
+
+@enduml

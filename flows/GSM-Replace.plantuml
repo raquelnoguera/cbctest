@@ -1,0 +1,45 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor transparent
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+
+participant CBE as cbe
+box "CBC" #e0e0ff
+participant FrontEnd as fe
+collections GSM_Handler as handlers
+end box
+collections BSC as bsc
+
+cbe -> fe: [1] Alert
+fe -> cbe: [2] Ack
+loop one per BSC
+    opt Stop broadcasting in removed cells
+        fe -> handlers: [3] STOP
+        note right
+        Refer to the stop flow for GSM.
+        end note
+    end
+    opt Update broadcast in ongoing cells and add new ones
+        fe -> handlers: [4.a] UpdatePWS-GERAN
+        handlers -> bsc: [5.a] WRITE-REPLACE
+        alt success in all the cells
+            bsc -> handlers: [5.b] WRITE-REPLACE COMPLETE
+        else failure in one or more cells
+            bsc -> handlers: [5.c] WRITE-REPLACE FAILURE 
+        end
+        handlers -> fe: [4.b] reportUpdatePWS-GERAN
+    end
+    opt Start broadcasting in new cells
+        fe -> handlers: [6] pws-GERAN
+        note right
+        Refer to the new Alert flow for GSM.
+        end note
+    end
+end
+fe -> cbe: [7] Report
+@enduml

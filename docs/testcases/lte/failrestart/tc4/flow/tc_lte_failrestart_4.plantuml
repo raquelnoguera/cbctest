@@ -1,0 +1,28 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor #f2f2f2
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+skinparam SequenceMessageAlign center
+
+participant CBE as cbe
+participant CBC_A as cbc_a
+participant CBC_B as cbc_b
+participant MME as mme
+
+cbe -> cbc_a: [1] CAP Alert
+cbc_a -> mme: [2] WRITE-REPLACE WARNING REQUEST
+mme -> cbc_a: [3] WRITE-REPLACE WARNING RESPONSE
+note over cbc_a, mme: Alert broadcasted at least once
+group One or more
+    rnote over mme
+        Receiving failure 
+        indications from eNBs
+    endrnote
+    mme -> cbc_b: [4] PWS FAILURE INDICATION
+end
+@enduml

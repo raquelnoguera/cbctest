@@ -1,0 +1,53 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor transparent
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+
+participant CBE as cbe
+box "CBC" #e0e0ff
+participant FrontEnd as fe
+collections UMTS_Handler as handlers
+end box
+collections RNC as rnc
+
+cbe -> fe: [1] Alert
+fe -> cbe: [2] Ack
+loop one per old MME
+    opt Stop broadcasting in removed areas (Cells, TAs, etc.)
+        fe -> handlers: [3] STOP
+        note right
+        Refer to the stop flow for LTE.
+        end note
+    end
+    opt Update broadcast in ongoing areas and add new ones controlled by this MME
+        fe -> handlers: [4.a] UpdatePWS-LTE
+        handlers -> mme: [5.a] WRITE-REPLACE WARNING REQUEST
+        mme -> handlers: [5.b] WRITE-REPLACE WARNING RESPONSE
+        handlers -> fe: [4.b] reportUpdatePWS-4G
+        opt if [4.a] includes "Send Write-Replace-Warning-Indication"
+            mme -> handlers: [5.c] WRITE REPLACE WARNING INDICATION
+            handlers -> fe: [4.c] AsyncReport
+        end
+        opt if one or more eNodeBs report failure in some cells
+            loop for each eNodeB in which there is at least one failed cell
+                mme -> handlers: [5.d] PWS FAILURE INDICATION
+                handlers -> fe: [4.d] failureIndication-4G
+            end
+        end
+    end
+end
+loop one per new MME
+    opt Start broadcasting in new cells
+        fe -> handlers: [6] pws-4G
+        note right
+        Refer to the new Alert flow for LTE.
+        end note
+    end
+end
+fe -> cbe: [7] Report
+@enduml

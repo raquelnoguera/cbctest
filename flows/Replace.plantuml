@@ -1,0 +1,90 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor transparent
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+
+
+participant CBE as cbe
+box "CBC" #e0e0ff
+participant FrontEnd as fe
+collections RAT_Handlers as handlers
+end box
+collections BSC as bsc
+collections RNC as rnc
+collections MME as mme
+
+cbe -> fe: [1] Update
+fe -> cbe: [2] Ack
+par The following groups are executed in parallel
+    group GERAN
+        loop one per BSC
+            opt Update broadcast in ongoing cells and add new ones
+                fe -> handlers: [3.a] UpdatePWS-GERAN
+                handlers -> bsc: [4.a] WRITE-REPLACE
+                alt success in all the cells
+                    bsc -> handlers: [4.b] WRITE-REPLACE COMPLETE
+                else failure in one or more cells
+                    bsc -> handlers: [4.c] WRITE-REPLACE FAILURE 
+                end
+                handlers -> fe: [3.b] reportUpdatePWS-GERAN
+            end
+            opt Stop broadcasting in removed cells
+                fe -> handlers: STOP
+                note right
+                Refer to steps 3 to 5 of the stop flow.
+                end note
+            end
+        end
+        fe -> cbe: [5] Report
+    end
+    group UTRAN
+        loop one per RNC
+            fe -> handlers: [6.a] UpdatePWS-UTRAN
+            opt Update broadcast in ongoing cells and add new ones
+                handlers -> rnc: [7.a] WRITE-REPLACE
+                alt success in all the service areas (cells)
+                    rnc -> handlers: [7.b] WRITE-REPLACE COMPLETE
+                else failure in one or more service area (cell)
+                    rnc -> handlers: [7.c] WRITE-REPLACE FAILURE 
+                end
+            end
+            opt Stop broadcasting in removed cells
+                fe -> handlers: STOP
+                note right
+                Refer to steps 6 to 8 of the stop flow.
+                end note
+            end
+            handlers -> fe: [6.b] reportUpdatePWS-UTRAN
+        end
+        fe -> cbe: [8] Report
+    end
+    group LTE
+        loop one per MME
+            fe -> handlers: [9.a] UpdatePWS-LTE
+            opt Update broadcast in ongoing cells and add new ones
+                handlers -> mme: [10.a] WRITE-REPLACE WARNING REQUEST
+                mme -> handlers: [10.b] WRITE-REPLACE WARNING RESPONSE
+                handlers -> fe: [9.b] reportUpdatePWS-4G
+                mme -> handlers: [10.c] WRITE REPLACE WARNING INDICATION
+                handlers -> fe: [9.c] AsyncReport
+                opt if one or more eNodeBs report failure in some cells
+                    mme -> handlers: [10.d] PWS FAILURE INDICATION
+                    handlers -> fe: [9.d] failureIndication-4G
+                end
+            end 
+            opt Stop broadcasting in removed cells
+                fe -> handlers: STOP
+                note right
+                Refer to steps 9 to 11 of the stop flow.
+                end note
+            end
+        end
+        fe -> cbe: [11] Report
+    end
+end
+@enduml

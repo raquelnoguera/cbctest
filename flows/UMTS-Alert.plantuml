@@ -1,0 +1,31 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor transparent
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+
+participant CBE as cbe
+box "CBC" #e0e0ff
+participant FrontEnd as fe
+collections UMTS_Handler as handler
+end box
+collections RNC as rnc
+
+cbe -> fe: [1] Alert
+fe -> cbe: [2] Ack
+loop one per RNC
+    fe -> handler: [3.a] pws-UTRAN 
+    handler -> rnc: [4.a] WRITE-REPLACE
+    alt success in all the cells
+        rnc -> handler: [4.b] WRITE-REPLACE COMPLETE
+    else failure in one or more cells
+    rnc -> handler: [4.c] WRITE-REPLACE FAILURE 
+    end
+    handler -> fe: [3.b] ReportPWS-UTRAN
+end
+fe -> cbe: [5] Report
+@enduml

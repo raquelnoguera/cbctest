@@ -1,0 +1,31 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor #f2f2f2
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+skinparam SequenceMessageAlign center
+
+participant CBE as cbe
+participant CBC as cbc
+participant MME as mme
+
+cbe -> cbc: [1] CAP Alert
+cbc -> mme: [2] WRITE-REPLACE WARNING REQUEST
+mme -> cbc: [3] WRITE-REPLACE WARNING RESPONSE
+group One or more
+    rnote over mme
+        Receiving 
+        responses 
+        from eNBs
+    endrnote
+    mme -> cbc: [4] WRITE-REPLACE WARNING INDICATION
+end
+cbc -> mme: [5] ERROR INDICATION
+note across: Broadcast active at least in the area not affected by the error.
+cbc --> cbe: feedback
+
+@enduml

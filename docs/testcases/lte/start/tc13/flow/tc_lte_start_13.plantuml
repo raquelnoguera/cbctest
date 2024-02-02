@@ -1,0 +1,27 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor #f2f2f2
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+skinparam SequenceMessageAlign center
+
+participant CBE as cbe
+participant CBC as cbc
+participant "MME-a" as mmea
+participant "MME-b" as mmeb
+
+cbe -> cbc: [1] CAP Alert
+cbc -> mmea: [2] WRITE-REPLACE WARNING REQUEST
+rnote over cbc
+    Timeout for RESPONSE
+endrnote
+cbc -> mmeb: [3] WRITE-REPLACE WARNING REQUEST
+mmeb -> cbc: [4] WRITE-REPLACE WARNING RESPONSE
+cbc --> cbe: [5]feedback
+mmea --> cbc: [6] WRITE-REPLACE WARNING RESPONSE
+
+@enduml

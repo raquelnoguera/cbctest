@@ -1,0 +1,33 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor #f2f2f2
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+skinparam SequenceMessageAlign center
+
+participant CBE as cbe
+participant CBC as cbc
+collections MME as mme
+participant FM as fm
+
+cbe -> cbc: [1] CAP Alert
+
+group One per MME involved in this test
+    cbc -> mme: [2] WRITE-REPLACE WARNING REQUEST
+    mme -> cbc: [3] WRITE-REPLACE WARNING RESPONSE
+end
+group One or more per MME involved in this test
+    mme -> cbc: [4] WRITE-REPLACE WARNING INDICATION
+end
+rnote over cbc
+    Log CB failure
+    in eNB
+endrnote
+cbc --> fm: [5] Alarm
+cbc --> cbe: [6] feedback
+
+@enduml

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="400px" preserveAspectRatio="none" style="width:566px;height:400px;background:#F2F2F2;" version="1.1" viewBox="0 0 566 400" width="566px" zoomAndPan="magnify"><defs/><g><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="71" x2="71" y1="37.6094" y2="393.125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="183" x2="183" y1="37.6094" y2="393.125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="486" x2="486" y1="37.6094" y2="393.125"/><rect fill="#FEFECE" height="31.6094" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.5;" width="42" x="50" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="57" y="26.5332">CBE</text><rect fill="#FEFECE" height="31.6094" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.5;" width="43" x="162" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="169" y="26.5332">CBC</text><rect fill="#FEFECE" height="31.6094" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.5;" width="45" x="464" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="471" y="26.5332">MME</text><path d="M15,54.6094 L96,54.6094 L96,62.6094 L86,72.6094 L10,72.6094 L10,59.6094 A5,5 0 0 1 15,54.6094 " fill="#EEEEEE" style="stroke:#A0A0FF;stroke-width:1.0;"/><rect fill="none" height="109.4063" rx="5" ry="5" style="stroke:#A0A0FF;stroke-width:2.0;" width="539" x="10" y="54.6094"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="41" x="25" y="69.1045">Alert 1</text><polygon fill="#A80036" points="171.5,91.3125,181.5,95.3125,171.5,99.3125,175.5,95.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="71" x2="177.5" y1="95.3125" y2="95.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="83.25" y="90.4561">[1.1] CAP Alert</text><polygon fill="#A80036" points="474.5,121.6641,484.5,125.6641,474.5,129.6641,478.5,125.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="183.5" x2="480.5" y1="125.6641" y2="125.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="268" x="201" y="120.8076">[1.2] WRITE-REPLACE WARNING REQUEST</text><polygon fill="#A80036" points="194.5,152.0156,184.5,156.0156,194.5,160.0156,190.5,156.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188.5" x2="485.5" y1="156.0156" y2="156.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="279" x="195.5" y="151.1592">[1.3] WRITE-REPLACE WARNING RESPONSE</text><rect fill="#EEEEEE" height="3" style="stroke:#EEEEEE;stroke-width:1.0;" width="559" x="0" y="192.1914"/><line style="stroke:#000000;stroke-width:1.0;" x1="0" x2="559" y1="192.1914" y2="192.1914"/><line style="stroke:#000000;stroke-width:1.0;" x1="0" x2="559" y1="195.1914" y2="195.1914"/><rect fill="#EEEEEE" height="24.3516" style="stroke:#000000;stroke-width:2.0;" width="115" x="222" y="181.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="97" x="228" y="198.5107">Alert 1 is active</text><path d="M15,222.3672 L96,222.3672 L96,230.3672 L86,240.3672 L10,240.3672 L10,227.3672 A5,5 0 0 1 15,222.3672 " fill="#EEEEEE" style="stroke:#A0A0FF;stroke-width:1.0;"/><rect fill="none" height="109.4063" rx="5" ry="5" style="stroke:#A0A0FF;stroke-width:2.0;" width="539" x="10" y="222.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="41" x="25" y="236.8623">Alert 2</text><polygon fill="#A80036" points="171.5,259.0703,181.5,263.0703,171.5,267.0703,175.5,263.0703" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="71" x2="177.5" y1="263.0703" y2="263.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="83.25" y="258.2139">[2.1] CAP Alert</text><polygon fill="#A80036" points="474.5,289.4219,484.5,293.4219,474.5,297.4219,478.5,293.4219" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="183.5" x2="480.5" y1="293.4219" y2="293.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="268" x="201" y="288.5654">[2.2] WRITE-REPLACE WARNING REQUEST</text><polygon fill="#A80036" points="194.5,319.7734,184.5,323.7734,194.5,327.7734,190.5,323.7734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188.5" x2="485.5" y1="323.7734" y2="323.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="279" x="195.5" y="318.917">[2.3] WRITE-REPLACE WARNING RESPONSE</text><rect fill="#EEEEEE" height="3" style="stroke:#EEEEEE;stroke-width:1.0;" width="559" x="0" y="359.9492"/><line style="stroke:#000000;stroke-width:1.0;" x1="0" x2="559" y1="359.9492" y2="359.9492"/><line style="stroke:#000000;stroke-width:1.0;" x1="0" x2="559" y1="362.9492" y2="362.9492"/><rect fill="#EEEEEE" height="24.3516" style="stroke:#000000;stroke-width:2.0;" width="203" x="178" y="348.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="185" x="184" y="366.2686">Alerts 1 and 2 are both active</text><!--MD5=[dc77e3a0559b5c84199db80c19d4956d]
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor #f2f2f2
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+skinparam SequenceMessageAlign center
+
+participant CBE as cbe
+participant CBC as cbc
+participant MME as mme
+
+group Alert 1
+    cbe -> cbc: [1.1] CAP Alert
+    cbc -> mme: [1.2] WRITE-REPLACE WARNING REQUEST
+    mme -> cbc: [1.3] WRITE-REPLACE WARNING RESPONSE
+end
+
+== Alert 1 is active ==
+
+group Alert 2
+    cbe -> cbc: [2.1] CAP Alert
+    cbc -> mme: [2.2] WRITE-REPLACE WARNING REQUEST
+    mme -> cbc: [2.3] WRITE-REPLACE WARNING RESPONSE
+end
+
+== Alerts 1 and 2 are both active ==
+
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 17:16:42 CET 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: Cp1252
+Language: en
+Country: GB
+--></g></svg>

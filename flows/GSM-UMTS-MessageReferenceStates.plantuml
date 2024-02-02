@@ -1,0 +1,24 @@
+@startuml
+skinparam BackgroundColor transparent
+hide empty description
+state "Created" as crea
+state "Pending Activation" as pend
+state "Active" as act
+state "Paused" as pau
+state "Updating" as upd
+state "Stopping" as stop
+state "Stopped" as dest
+
+[*] --> crea : Alert from CBE
+crea -right-> pend : pws
+pend --> act : reportPWS
+act --> pau : failureIndication
+pau --> pend : pws
+pau --> act : restartHappened
+act --> upd : UpdatePWS
+upd --> act : reportUpdatePWS
+act --> stop : stopPWS
+act --> dest : campaign expired
+stop --> dest : reportStopPWS
+dest --> [*]
+@enduml

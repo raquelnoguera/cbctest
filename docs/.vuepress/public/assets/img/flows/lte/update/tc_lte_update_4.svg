@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1186px" preserveAspectRatio="none" style="width:582px;height:1186px;background:#F2F2F2;" version="1.1" viewBox="0 0 582 1186" width="582px" zoomAndPan="magnify"><defs/><g><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="71" x2="71" y1="37.6094" y2="1179.3203"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="183" x2="183" y1="37.6094" y2="1179.3203"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="493" x2="493" y1="37.6094" y2="1179.3203"/><rect fill="#FEFECE" height="31.6094" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.5;" width="42" x="50" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="57" y="26.5332">CBE</text><rect fill="#FEFECE" height="31.6094" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.5;" width="43" x="162" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="169" y="26.5332">CBC</text><rect fill="#FEFECE" height="31.6094" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.5;" width="45" x="471" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="478" y="26.5332">MME</text><path d="M15,54.6094 L118,54.6094 L118,62.6094 L108,72.6094 L10,72.6094 L10,59.6094 A5,5 0 0 1 15,54.6094 " fill="#EEEEEE" style="stroke:#A0A0FF;stroke-width:1.0;"/><rect fill="none" height="239.1641" rx="5" ry="5" style="stroke:#A0A0FF;stroke-width:2.0;" width="556" x="10" y="54.6094"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="63" x="25" y="69.1045">Start alert</text><polygon fill="#A80036" points="171.5,91.3125,181.5,95.3125,171.5,99.3125,175.5,95.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="71" x2="177.5" y1="95.3125" y2="95.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="88.75" y="90.4561">[1] CAP Alert</text><polygon fill="#A80036" points="481.5,121.6641,491.5,125.6641,481.5,129.6641,485.5,125.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="183.5" x2="487.5" y1="125.6641" y2="125.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="257" x="210" y="120.8076">[2] WRITE-REPLACE WARNING REQUEST</text><polygon fill="#A80036" points="194.5,152.0156,184.5,156.0156,194.5,160.0156,190.5,156.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188.5" x2="492.5" y1="156.0156" y2="156.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="268" x="204.5" y="151.1592">[3] WRITE-REPLACE WARNING RESPONSE</text><path d="M127,171.0156 L247,171.0156 L247,179.0156 L237,189.0156 L122,189.0156 L122,176.0156 A5,5 0 0 1 127,171.0156 " fill="#EEEEEE" style="stroke:#A0A0FF;stroke-width:1.0;"/><rect fill="none" height="115.7578" rx="5" ry="5" style="stroke:#A0A0FF;stroke-width:2.0;" width="434" x="122" y="171.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="80" x="137" y="185.5107">One or more</text><rect fill="#FBFB77" height="57" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.0;" width="72" x="457" y="194.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="461" y="211.8623">Receiving</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60" x="461" y="228.2139">responses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="461" y="244.5654">from eNBs</text><polygon fill="#A80036" points="194.5,274.7734,184.5,278.7734,194.5,282.7734,190.5,278.7734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188.5" x2="492.5" y1="278.7734" y2="278.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="266" x="205.5" y="273.917">[4] WRITE-REPLACE WARNING INDICATION</text><path d="M21,310.7734 L21,326.7734 A5,5 0 0 0 26,331.7734 L537,331.7734 A5,5 0 0 0 542,326.7734 L542,315.7734 L532,305.7734 L26,305.7734 A5,5 0 0 0 21,310.7734 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><path d="M532,305.7734 L532,313.2734 A2.5,2.5 0 0 0 534.5,315.7734 L542,315.7734 L532,305.7734 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="269" x="142.5" y="324.2686">Broadcast runs for 1 broadcast period or more.</text><path d="M15,344.125 L133,344.125 L133,352.125 L123,362.125 L10,362.125 L10,349.125 A5,5 0 0 1 15,344.125 " fill="#EEEEEE" style="stroke:#A0A0FF;stroke-width:1.0;"/><rect fill="none" height="787.8438" rx="5" ry="5" style="stroke:#A0A0FF;stroke-width:2.0;" width="566" x="10" y="344.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="78" x="25" y="358.6201">Update alert</text><polygon fill="#A80036" points="171.5,380.8281,181.5,384.8281,171.5,388.8281,175.5,384.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="71" x2="177.5" y1="384.8281" y2="384.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="88.75" y="379.9717">[5] CAP Alert</text><path d="M117,399.8281 L210,399.8281 L210,407.8281 L200,417.8281 L112,417.8281 L112,404.8281 A5,5 0 0 1 117,399.8281 " fill="#EEEEEE" style="stroke:#A0A0FF;stroke-width:1.0;"/><rect fill="none" height="243.1641" rx="5" ry="5" style="stroke:#A0A0FF;stroke-width:2.0;" width="454" x="112" y="399.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="53" x="127" y="414.3232">Option 1</text><polygon fill="#A80036" points="481.5,436.5313,491.5,440.5313,481.5,444.5313,485.5,440.5313" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="183.5" x2="487.5" y1="440.5313" y2="440.5313"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="268" x="204.5" y="435.6748">[6.a] WRITE-REPLACE WARNING REQUEST</text><polygon fill="#A80036" points="194.5,466.8828,184.5,470.8828,194.5,474.8828,190.5,470.8828" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188.5" x2="492.5" y1="470.8828" y2="470.8828"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="279" x="199" y="466.0264">[7.a] WRITE-REPLACE WARNING RESPONSE</text><rect fill="#FBFB77" height="24" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.0;" width="409" x="134" y="483.8828"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="187" x="245" y="501.3779">Broadcasting updated message.</text><path d="M127,520.2344 L247,520.2344 L247,528.2344 L237,538.2344 L122,538.2344 L122,525.2344 A5,5 0 0 1 127,520.2344 " fill="#EEEEEE" style="stroke:#A0A0FF;stroke-width:1.0;"/><rect fill="none" height="115.7578" rx="5" ry="5" style="stroke:#A0A0FF;stroke-width:2.0;" width="434" x="122" y="520.2344"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="80" x="137" y="534.7295">One or more</text><rect fill="#FBFB77" height="57" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.0;" width="72" x="457" y="543.5859"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="461" y="561.0811">Receiving</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60" x="461" y="577.4326">responses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="461" y="593.7842">from eNBs</text><polygon fill="#A80036" points="194.5,623.9922,184.5,627.9922,194.5,631.9922,190.5,627.9922" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188.5" x2="492.5" y1="627.9922" y2="627.9922"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="277" x="200" y="623.1357">[8.a] WRITE-REPLACE WARNING INDICATION</text><path d="M117,656.9922 L210,656.9922 L210,664.9922 L200,674.9922 L112,674.9922 L112,661.9922 A5,5 0 0 1 117,656.9922 " fill="#EEEEEE" style="stroke:#A0A0FF;stroke-width:1.0;"/><rect fill="none" height="467.9766" rx="5" ry="5" style="stroke:#A0A0FF;stroke-width:2.0;" width="454" x="112" y="656.9922"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="53" x="127" y="671.4873">Option 2</text><polygon fill="#A80036" points="481.5,693.6953,491.5,697.6953,481.5,701.6953,485.5,697.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="183.5" x2="487.5" y1="697.6953" y2="697.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="197" x="240" y="692.8389">[6.b] STOP WARNING REQUEST</text><polygon fill="#A80036" points="194.5,724.0469,184.5,728.0469,194.5,732.0469,190.5,728.0469" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188.5" x2="492.5" y1="728.0469" y2="728.0469"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="208" x="234.5" y="723.1904">[7.b] STOP WARNING RESPONSE</text><rect fill="#FBFB77" height="24" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.0;" width="409" x="134" y="741.0469"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="254.5" y="758.542">Original broadcast cancelled.</text><path d="M127,777.3984 L247,777.3984 L247,785.3984 L237,795.3984 L122,795.3984 L122,782.3984 A5,5 0 0 1 127,777.3984 " fill="#EEEEEE" style="stroke:#A0A0FF;stroke-width:1.0;"/><rect fill="none" height="115.7578" rx="5" ry="5" style="stroke:#A0A0FF;stroke-width:2.0;" width="434" x="122" y="777.3984"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="80" x="137" y="791.8936">One or more</text><rect fill="#FBFB77" height="57" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.0;" width="72" x="457" y="800.75"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="461" y="818.2451">Receiving</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60" x="461" y="834.5967">responses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="461" y="850.9482">from eNBs</text><polygon fill="#A80036" points="194.5,881.1563,184.5,885.1563,194.5,889.1563,190.5,885.1563" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188.5" x2="492.5" y1="885.1563" y2="885.1563"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="206" x="235.5" y="880.2998">[8.b] STOP WARNING INDICATION</text><polygon fill="#A80036" points="481.5,918.5078,491.5,922.5078,481.5,926.5078,485.5,922.5078" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="183.5" x2="487.5" y1="922.5078" y2="922.5078"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="268" x="204.5" y="917.6514">[9.b] WRITE-REPLACE WARNING REQUEST</text><polygon fill="#A80036" points="194.5,948.8594,184.5,952.8594,194.5,956.8594,190.5,952.8594" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188.5" x2="492.5" y1="952.8594" y2="952.8594"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="286" x="195.5" y="948.0029">[10.b] WRITE-REPLACE WARNING RESPONSE</text><rect fill="#FBFB77" height="24" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.0;" width="409" x="134" y="965.8594"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="145" x="266" y="983.3545">New broadcast activated.</text><path d="M127,1002.2109 L247,1002.2109 L247,1010.2109 L237,1020.2109 L122,1020.2109 L122,1007.2109 A5,5 0 0 1 127,1002.2109 " fill="#EEEEEE" style="stroke:#A0A0FF;stroke-width:1.0;"/><rect fill="none" height="115.7578" rx="5" ry="5" style="stroke:#A0A0FF;stroke-width:2.0;" width="434" x="122" y="1002.2109"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="80" x="137" y="1016.7061">One or more</text><rect fill="#FBFB77" height="57" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.0;" width="72" x="457" y="1025.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="461" y="1043.0576">Receiving</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60" x="461" y="1059.4092">responses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="461" y="1075.7607">from eNBs</text><polygon fill="#A80036" points="194.5,1105.9688,184.5,1109.9688,194.5,1113.9688,190.5,1109.9688" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="188.5" x2="492.5" y1="1109.9688" y2="1109.9688"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="284" x="196.5" y="1105.1123">[11.b] WRITE-REPLACE WARNING INDICATION</text><polygon fill="#A80036" points="82,1157.3203,72,1161.3203,82,1165.3203,78,1161.3203" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="76" x2="182.5" y1="1161.3203" y2="1161.3203"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="101.25" y="1156.4639">feedback</text><!--MD5=[7871608d952ab660c16aa0cb97add9cd]
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor #f2f2f2
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+skinparam SequenceMessageAlign center
+
+participant CBE as cbe
+participant CBC as cbc
+participant MME as mme
+
+group Start alert
+    cbe -> cbc: [1] CAP Alert
+    cbc -> mme: [2] WRITE-REPLACE WARNING REQUEST
+    mme -> cbc: [3] WRITE-REPLACE WARNING RESPONSE
+    group One or more
+        rnote over mme
+            Receiving 
+            responses 
+            from eNBs
+        endrnote
+        mme -> cbc: [4] WRITE-REPLACE WARNING INDICATION
+    end
+end
+note across: Broadcast runs for 1 broadcast period or more.
+group Update alert
+    cbe -> cbc: [5] CAP Alert
+    group Option 1
+        cbc -> mme: [6.a] WRITE-REPLACE WARNING REQUEST
+        mme -> cbc: [7.a] WRITE-REPLACE WARNING RESPONSE
+        rnote over cbc, mme
+            Broadcasting updated message.
+        endrnote
+        group One or more
+            rnote over mme
+                Receiving 
+                responses 
+                from eNBs
+            endrnote
+            mme -> cbc: [8.a] WRITE-REPLACE WARNING INDICATION
+        end
+    end
+    group Option 2
+        cbc -> mme: [6.b] STOP WARNING REQUEST
+        mme -> cbc: [7.b] STOP WARNING RESPONSE
+        rnote over cbc, mme
+            Original broadcast cancelled.
+        endrnote
+        group One or more
+            rnote over mme
+                Receiving 
+                responses 
+                from eNBs
+            endrnote
+            mme -> cbc: [8.b] STOP WARNING INDICATION
+        end
+        cbc -> mme: [9.b] WRITE-REPLACE WARNING REQUEST
+        mme -> cbc: [10.b] WRITE-REPLACE WARNING RESPONSE
+        rnote over cbc, mme
+            New broadcast activated.
+        endrnote
+        group One or more
+            rnote over mme
+                Receiving 
+                responses 
+                from eNBs
+            endrnote
+            mme -> cbc: [11.b] WRITE-REPLACE WARNING INDICATION
+        end
+    end
+end
+cbc - -> cbe: feedback
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 17:16:42 CET 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: Cp1252
+Language: en
+Country: GB
+--></g></svg>

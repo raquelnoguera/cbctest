@@ -1,0 +1,35 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor transparent
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+
+participant CBE as cbe
+box "CBC" #e0e0ff
+participant FrontEnd as fe
+collections GSM_Handler as handlers
+end box
+collections BSC as bsc
+
+cbe -> fe: [1] Query
+alt if campaign identifier exists
+    fe -> cbe: [2] Ack
+else if campaign identifier does not exist
+    fe -> cbe: [2] Error
+end
+loop one per BSC
+    fe -> handlers: [3.a] messageQuery-GERAN
+    handlers -> bsc: [4.a] MESSAGE STATUS QUERY
+    alt success in all the cells
+        bsc -> handlers: [4.b] MESSAGE STATUS QUERY COMPLETE
+    else failure in one or more cells
+        bsc -> handlers: [4.c] MESSAGE STATUS QUERY FAILURE
+    end
+    handlers -> fe: [3.b] reportMessageQuery-GERAN
+end
+fe -> cbe: [5] Report
+@enduml

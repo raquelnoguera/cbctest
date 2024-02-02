@@ -1,0 +1,71 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor transparent
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+
+participant CBE as cbe
+box "CBC" #e0e0ff
+participant FrontEnd as fe
+collections RAT_Handlers as handlers
+end box
+collections BSC as bsc
+collections RNC as rnc
+collections MME as mme
+
+'autonumber "[0]"
+
+cbe -> fe: [1] Alert
+fe -> cbe: [2] Ack
+par The following groups are executed in parallel
+    group GERAN
+        loop one per BSC
+            fe -> handlers: [3.a] pws-GERAN 
+            handlers -> bsc: [4.a] WRITE-REPLACE
+            alt success in all the cells
+                bsc -> handlers: [4.b] WRITE-REPLACE COMPLETE
+            else failure in one or more cells
+            bsc -> handlers: [4.c] WRITE-REPLACE FAILURE 
+            end
+            handlers -> fe: [3.b] ReportPWS-GERAN
+        end
+        fe -> cbe: [5] Report
+    end
+    group UTRAN
+        loop one per RNC
+            fe -> handlers: [6.a] pws-UTRAN
+            handlers -> rnc: [7.a] WRITE-REPLACE
+            alt success in all the service areas (cells)
+                rnc -> handlers: [7.b] WRITE-REPLACE COMPLETE
+            else failure in one or more service area (cell)
+                rnc -> handlers: [7.c] WRITE-REPLACE FAILURE 
+            end
+            handlers -> fe: [6.b] ReportPWS-UTRAN
+        end
+        fe -> cbe: [8] Report
+    end
+    group LTE
+        loop one per MME
+            fe -> handlers: [9.a] pws-LTE
+            handlers -> mme: [10.a] WRITE-REPLACE WARNING REQUEST
+            mme -> handlers: [10.b] WRITE-REPLACE WARNING RESPONSE
+            handlers -> fe: [9.b] ReportPWS-4G
+            opt if [9.a] includes "Send Write-Replace-Warning-Indication"
+                mme -> handlers: [10.c] WRITE REPLACE WARNING INDICATION
+                handlers -> fe: [9.c] AsyncReport
+            end
+            opt if one or more eNodeBs report failure in some cells
+                loop for each eNodeB in which there is at least one failed cell
+                    mme -> handlers: [10.d] PWS FAILURE INDICATION
+                    handlers -> fe: [9.d] failureIndication-4G
+                end
+            end 
+        end
+        fe -> cbe: [11] Report
+    end
+end
+@enduml

@@ -1,0 +1,35 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor transparent
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+
+participant CBE as cbe
+box "CBC" #e0e0ff
+participant FrontEnd as fe
+collections UMTS_Handler as handlers
+end box
+collections RNC as rnc
+
+cbe -> fe: [1] Query
+alt if campaign identifier exists
+    fe -> cbe: [2] Ack
+else if campaign identifier does not exist
+    fe -> cbe: [2] Error
+end
+loop one per RNC
+    fe -> handlers: [3.a] messageQuery-UTRAN
+    handlers -> rnc: [4.a] MESSAGE STATUS QUERY
+    alt success in all the service areas
+        rnc -> handlers: [4.b] MESSAGE STATUS QUERY COMPLETE
+    else failure in one or more service areas
+        rnc -> handlers: [4.c] MESSAGE STATUS QUERY FAILURE
+    end
+    handlers -> fe: [3.b] reportMessageQuery-UTRAN
+end
+fe -> cbe: [5] Report
+@enduml

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="333px" preserveAspectRatio="none" style="width:544px;height:333px;background:#F2F2F2;" version="1.1" viewBox="0 0 544 333" width="544px" zoomAndPan="magnify"><defs/><g><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="56" x2="56" y1="37.6094" y2="326.7734"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="168" x2="168" y1="37.6094" y2="326.7734"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="460" x2="460" y1="37.6094" y2="326.7734"/><rect fill="#FEFECE" height="31.6094" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.5;" width="42" x="35" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="42" y="26.5332">CBE</text><rect fill="#FEFECE" height="31.6094" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.5;" width="43" x="147" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="154" y="26.5332">CBC</text><rect fill="#FEFECE" height="31.6094" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.5;" width="45" x="438" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="445" y="26.5332">MME</text><polygon fill="#A80036" points="156.5,65.9609,166.5,69.9609,156.5,73.9609,160.5,69.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="56" x2="162.5" y1="69.9609" y2="69.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="73.75" y="65.1045">[1] CAP Alert</text><polygon fill="#A80036" points="448.5,96.3125,458.5,100.3125,448.5,104.3125,452.5,100.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="168.5" x2="454.5" y1="100.3125" y2="100.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="257" x="186" y="95.4561">[2] WRITE-REPLACE WARNING REQUEST</text><polygon fill="#A80036" points="179.5,126.6641,169.5,130.6641,179.5,134.6641,175.5,130.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="173.5" x2="459.5" y1="130.6641" y2="130.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="268" x="180.5" y="125.8076">[3] WRITE-REPLACE WARNING RESPONSE</text><rect fill="#FBFB77" height="24" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.0;" width="391" x="119" y="143.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="181" x="224" y="161.1592">Alert broadcasted at least once</text><path d="M112,180.0156 L232,180.0156 L232,188.0156 L222,198.0156 L107,198.0156 L107,185.0156 A5,5 0 0 1 112,180.0156 " fill="#EEEEEE" style="stroke:#A0A0FF;stroke-width:1.0;"/><rect fill="none" height="99.4063" rx="5" ry="5" style="stroke:#A0A0FF;stroke-width:2.0;" width="431" x="107" y="180.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="80" x="122" y="194.5107">One or more</text><rect fill="#FBFB77" height="40" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.0;" width="135" x="393" y="203.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="93" x="397" y="220.8623">Receiving failure</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127" x="397" y="237.2139">indications from eNBs</text><polygon fill="#A80036" points="179.5,267.4219,169.5,271.4219,179.5,275.4219,175.5,271.4219" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="173.5" x2="459.5" y1="271.4219" y2="271.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="183" x="223" y="266.5654">[4] PWS FAILURE INDICATION</text><polygon fill="#A80036" points="67,304.7734,57,308.7734,67,312.7734,63,308.7734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="61" x2="167.5" y1="308.7734" y2="308.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57" x="83.75" y="303.917">Feedback</text><!--MD5=[bb0982877085c4414661543ff9f27916]
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor #f2f2f2
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+skinparam SequenceMessageAlign center
+
+participant CBE as cbe
+participant CBC as cbc
+participant MME as mme
+
+cbe -> cbc: [1] CAP Alert
+cbc -> mme: [2] WRITE-REPLACE WARNING REQUEST
+mme -> cbc: [3] WRITE-REPLACE WARNING RESPONSE
+rnote over cbc, mme
+    Alert broadcasted at least once
+endrnote
+group One or more
+    rnote over mme
+        Receiving failure 
+        indications from eNBs
+    endrnote
+    mme -> cbc: [4] PWS FAILURE INDICATION
+end
+cbc - -> cbe: Feedback
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 17:16:42 CET 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: Cp1252
+Language: en
+Country: GB
+--></g></svg>

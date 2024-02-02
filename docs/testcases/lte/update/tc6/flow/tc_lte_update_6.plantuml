@@ -1,0 +1,59 @@
+
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor #f2f2f2
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+skinparam SequenceMessageAlign center
+
+participant CBE as cbe
+participant CBC as cbc
+collections MME as mme
+
+group Start alert
+    cbe -> cbc: [1] CAP Alert
+    cbc -> mme: [2] WRITE-REPLACE WARNING REQUEST
+    mme -> cbc: [3] WRITE-REPLACE WARNING RESPONSE
+end
+note across: Broadcast runs for 1 broadcast period or more.
+
+group Update alert area
+    cbe -> cbc: [4] CAP Alert
+    group Option 1
+        group Stop broadcast completely
+            cbc -> mme: [5.a] STOP WARNING REQUEST
+            mme -> cbc: [6.a] STOP WARNING RESPONSE
+            rnote over cbc, mme
+                Broadcast stopped completely.
+            endrnote
+        end
+        group Re-start broadcast in new area
+            cbc -> mme: [7.a] WRITE-REPLACE WARNING REQUEST
+            mme -> cbc: [8.a] WRITE-REPLACE WARNING RESPONSE
+            rnote over cbc, mme
+                Broadcast re-started in new area.
+            endrnote
+        end
+    end
+    group Option 2
+        group Add New Cells
+            cbc -> mme: [5.b] WRITE-REPLACE WARNING REQUEST
+            mme -> cbc: [6.b] WRITE-REPLACE WARNING RESPONSE
+            rnote over cbc, mme
+                Broadcasting alert in new cells.
+            endrnote
+        end
+        group Remove old cells
+            cbc -> mme: [7.b] STOP WARNING REQUEST
+            mme -> cbc: [8.b] STOP WARNING RESPONSE
+            rnote over cbc, mme
+                Broadcast cancelled in removed cells.
+            endrnote
+        end
+    end
+end
+cbc --> cbe: feedback
+@enduml

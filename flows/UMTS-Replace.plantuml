@@ -1,0 +1,45 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor transparent
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+
+participant CBE as cbe
+box "CBC" #e0e0ff
+participant FrontEnd as fe
+collections UMTS_Handler as handlers
+end box
+collections RNC as rnc
+
+cbe -> fe: [1] Alert
+fe -> cbe: [2] Ack
+loop one per RNC
+    opt Stop broadcasting in removed service area
+        fe -> handlers: [3] STOP
+        note right
+        Refer to the stop flow for UMTS.
+        end note
+    end
+    opt Update broadcast in ongoing service areas and add new ones
+        fe -> handlers: [4.a] UpdatePWS-UTRAN
+        handlers -> rnc: [5.a] WRITE-REPLACE
+        alt success in all the service areas
+            rnc -> handlers: [5.b] WRITE-REPLACE COMPLETE
+        else failure in one or more service areas
+            rnc -> handlers: [5.c] WRITE-REPLACE FAILURE 
+        end
+        handlers -> fe: [4.b] reportUpdatePWS-UTRAN
+    end
+    opt Start broadcasting in new service areas
+        fe -> handlers: [6] pws-UTRAN
+        note right
+        Refer to the new Alert flow for UMTS.
+        end note
+    end
+end
+fe -> cbe: [7] Report
+@enduml

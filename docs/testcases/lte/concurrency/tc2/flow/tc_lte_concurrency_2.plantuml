@@ -1,0 +1,24 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor #f2f2f2
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+skinparam SequenceMessageAlign center
+
+participant CBE as cbe
+participant CBC as cbc
+participant MME as mme
+
+== Alerts 1 and 2 are both active ==
+
+cbe -> cbc: [1] CAP Cancel
+cbc -> mme: [2] STOP WARNING REQUEST
+mme -> cbc: [3] STOP WARNING RESPONSE
+
+== Only alert 2 is active ==
+
+@enduml

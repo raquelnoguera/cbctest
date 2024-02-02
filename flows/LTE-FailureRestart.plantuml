@@ -1,0 +1,34 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor transparent
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+
+participant CBE as cbe
+box "CBC" #e0e0ff
+participant FrontEnd as fe
+collections LTE_Handler as handlers
+end box
+collections MME as mme
+
+mme -> handlers: [1] PWS FAILURE INDICATION
+handlers -> fe: [2] failureIndication-4G
+loop For each campaing affected
+    fe --> cbe: [3] Report
+end
+...<size:16><b>When recovered from failure</b></size>...
+loop for each RESTART received
+    mme -> handlers: [4] PWS RESTART INDICATION
+    handlers -> fe: [5] restartHappened-4G
+    loop Restart broadcast for each campaign still ongoing on the restarted warning areas
+        fe --> handlers: [6.a] pws-4G
+        handlers --> mme: [6.b] WRITE-REPLACE WARNING REQUEST
+        ...<size:16><b>When broadcast is restarted for a campaign</b></size>...
+        fe --> cbe: [6.c] Report
+    end
+end
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+hide footbox
+skinparam Shadowing false
+skinparam BackgroundColor #f2f2f2
+skinparam SequenceGroupBodyBackgroundColor transparent
+skinparam roundcorner 10
+skinparam ParticipantPadding 30
+skinparam BoxPadding 10
+skinparam SequenceGroupBorderColor #a0a0ff
+skinparam SequenceMessageAlign center
+
+participant CBE as cbe
+participant CBC as cbc
+collections MME as mme
+
+cbe -> cbc: [1] CAP Alert
+loop One per MME
+cbc -> mme: [2.a] WRITE-REPLACE WARNING REQUEST (local)
+cbc -> mme: [2.b] WRITE-REPLACE WARNING REQUEST (additional 1)
+cbc -> mme: [2.c] WRITE-REPLACE WARNING REQUEST (additional 2)
+mme -> cbc: [3.a]] WRITE-REPLACE WARNING RESPONSE
+mme -> cbc: [3.b] WRITE-REPLACE WARNING RESPONSE
+mme -> cbc: [3.c] WRITE-REPLACE WARNING RESPONSE
+end
+note across: Broadcast runs for 2 broadcast periods or more.
+cbe -> cbc: [4] CAP Cancel
+loop One per MME
+cbc -> mme: [5.a] STOP WARNING REQUEST (local)
+cbc -> mme: [5.b] STOP WARNING REQUEST (additional 1)
+cbc -> mme: [5.c] STOP WARNING REQUEST (additional 2)
+mme -> cbc: [6.a] STOP WARNING RESPONSE
+mme -> cbc: [6.b] STOP WARNING RESPONSE
+mme -> cbc: [6.c] STOP WARNING RESPONSE
+end
+cbc --> cbe: feedback
+
+@enduml
