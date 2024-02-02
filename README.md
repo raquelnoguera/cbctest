@@ -1,5 +1,7 @@
 # Intro
 
+This CBC test specification is currently hosted [here](https://cbctest.yaluba.com/).
+
 I have used [Vuepress](https://vuepress.vuejs.org/) to create this documentation.
 
 To create the test spec just:

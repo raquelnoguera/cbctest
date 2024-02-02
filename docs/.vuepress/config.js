@@ -59,6 +59,7 @@ export default defineUserConfig({
     darkMode: true,
     logo: '/assets/img/K_64.png',
     logoDark: '/assets/img/K_64.png',
+    repo: 'https://github.com/raquelnoguera/cbctest',
     navbar: [
       {
         text: 'Test Spec',
