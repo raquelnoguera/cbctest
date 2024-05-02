@@ -1,30 +1,32 @@
 # Intro
 
-This CBC test specification is currently hosted [here](https://cbctest.yaluba.com/).
+This CBC test specification has been deployed to [here](https://cbctest.yaluba.org/) as a Cloudflare Page.
 
-I have used [Vuepress](https://vuepress.vuejs.org/) to create this documentation.
+I have used [Vuepress 2](https://v2.vuepress.vuejs.org/) to create this documentation.
 
 To create the test spec just:
 
 1. clone this repo
-2. Make sure that you have a compatible version of NodeJS. I have used v16.14.0.
-3. Install all the packages listed in package.json by running (you can use *yarn* instead of *npm* as well):
+2. Make sure that you have a compatible version of NodeJS. I statert with v16.14.0 but moved now to 22.0.0.
+3. Install all the packages listed in package.json by running (you can use *npm* instead of *yarn* as well):
 
     ```
-    npm install
+    yarn install
     ```
     in the same folder where package.json is located.
+
+As you can see in package.json, I used yarn 4.1.1 for this build.
 
 Once this is done, you can run the documentation locally by entering:
 
 ```
-npm run docs:dev
+yarn docs:dev
 ```
 
 or you can build the site with:
 
 ```
-npm run docs:build
+yarn docs:build
 ```
 
 and install it in a WEB server that is accessible to everyone.
@@ -58,6 +60,6 @@ I used [plantuml](https://plantuml.com/) to create the information flows in the 
 
 # ToDo
 
-I only had time to write some of the LTE TCs that are listed in the excel sheet. Many of these TCs have been developed in Newman + Postman , but not all. 
+I only had time to write some of the LTE TCs that are listed in the excel sheet. Many of these TCs have been developed in Newman + Postman, but not all. 
 
 It was the intention to add to this TestSpec the pcap trace obtained during the execution of each TC agaisnt the Valid8 simulator, but I have not done it. I think that adding this may help a tester trying to execute the TC against a real MME.
