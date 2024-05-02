@@ -129,6 +129,8 @@ docs/.vuepress/public/certs/
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+yarn.lock
 
 # Others
 flows/*.jar
+package-lock.json

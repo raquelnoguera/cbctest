@@ -2,7 +2,6 @@ import { viteBundler } from '@vuepress/bundler-vite';
 import { defaultTheme } from '@vuepress/theme-default';
 import { defineUserConfig } from 'vuepress';
 import { pwaPlugin } from '@vuepress/plugin-pwa';
-// import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup';
 const { description } = require('../../package.json');
 // const fs = require('fs');
 
@@ -51,7 +50,6 @@ export default defineUserConfig({
    *      https://ecosystem.vuejs.press/themes/default/config.html
    */
   theme: defaultTheme({
-    repo: '',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
